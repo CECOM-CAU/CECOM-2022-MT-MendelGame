@@ -5,7 +5,7 @@ flaskApp = Flask(__name__)
 
 @flaskApp.route("/")
 def main():
-    return "Hello, World!"
+    return render_template("main.html")
 
 @flaskApp.route("/loading")
 def loading():
