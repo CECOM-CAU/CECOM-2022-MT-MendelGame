@@ -7,6 +7,10 @@ flaskApp = Flask(__name__)
 def main():
     return "Hello, World!"
 
+@flaskApp.route("/loading")
+def loading():
+    return "Loading"
+
 @flaskApp.route("/getWord")
 def getWord():
     wordFile = open("wordlist.txt", "r")
