@@ -9,7 +9,7 @@ def main():
 
 @flaskApp.route("/loading")
 def loading():
-    return "Loading"
+    return render_template("loading.html")
 
 @flaskApp.route("/getWord")
 def getWord():
