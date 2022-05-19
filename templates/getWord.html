@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <style>
+            .Words{
+                height: 100%;
+                width: 100%;
+                
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                animation: fadein 3s;
+            }
+
+            span{
+                font-size: 100px;
+            }
+
+            @keyframes fadein {
+                from {
+                    opacity: 0;
+                }
+                to {
+                    opacity: 1;
+                }
+            }
+        </style>
+    </head>
+    <div class="Words">
+        <span>{{ word[0] }}</span><br/>
+        <span>{{ word[1] }}</span><br/>
+        <span>{{ word[2] }}</span><br/>
+    </div>
+</html>

@@ -5,6 +5,10 @@ flaskApp = Flask(__name__)
 
 @flaskApp.route("/")
 def main():
+    return "Hello, World!"
+
+@flaskApp.route("/getWord")
+def getWord():
     wordFile = open("wordlist.txt", "r")
     wordList = wordFile.readlines()
     
@@ -13,7 +17,7 @@ def main():
     wordData[1] = wordData[1].strip()
     wordData[2] = wordData[2].strip()
 
-    return render_template("index.html", word=wordData)
+    return render_template("getWord.html", word=wordData)
  
 if __name__ == "__main__":
     flaskApp.run(host="0.0.0.0", port=3000)
