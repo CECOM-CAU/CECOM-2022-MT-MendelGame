@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template
 import random
 
 flaskApp = Flask(__name__)
@@ -13,7 +13,7 @@ def main():
     wordData[1] = wordData[1].strip()
     wordData[2] = wordData[2].strip()
 
-    return str(wordData)
+    return render_template("index.html", word=wordData)
  
 if __name__ == "__main__":
     flaskApp.run(host="0.0.0.0", port=3000)
